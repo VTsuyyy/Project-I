@@ -10,6 +10,5 @@ This is subject project, it's about the problem TSP_large_scale. Because of its 
 - You must input number of vertexs (in here I have 11 test case) and  the time exceed limit (s).
 
 
-Source: Inputs have graph I took from my Application algorithms subject.
-The code was writed by me and use some knowledge I learnt from my Introdution to AI subject.
+Source: Some file .txt have inputs I took from my Application algorithms subject. The code was writted by me use some knowledge I learnt from my Introdution to AI subject.
 🔥🔥🔥
