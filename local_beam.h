@@ -8,7 +8,7 @@ void local_beam(){
     sort(state, state + 20000, [](status *a, status *b)->bool{
         return a->cost < b->cost;
     });
-    int i = 0, a = 10;
+    int i = 0, a = min(10, 1000 / n + 1);
     for(int test = 1; test < 50000; test++){
         ++i;
         for(int l = 0; l <= n; l++){
@@ -18,7 +18,7 @@ void local_beam(){
         state[i]->cost = 1e6;
         // cout << bestCost << " " << stt << endl;
         if(test > 20 || t > 5){
-            a = 100;
+            a = min(100, 10000 / n + 1);
         }
         if(stt < i + 5000 || test % a == 0){
             i = 0;

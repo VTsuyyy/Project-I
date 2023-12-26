@@ -1,6 +1,6 @@
 
 
-bool directed(int bonus = 0, int begin = 0){
+bool directed(int bonus = 0, int begin = 0, int num = 1000){
 	// For each three points i th, j th, k th in current sequence
 	for(int i = begin; i < n; ++i){
 		for(int j = i+2; j < n; ++j){
@@ -22,7 +22,10 @@ bool directed(int bonus = 0, int begin = 0){
                     for(int l = 0; l <= k-j; ++l){
                         newSeq[i+l+1] = tempSeq[l];
                     }
-                    add_path(newSeq);
+                    num -= add_path(newSeq);
+                    if(num == 0){
+                        return true;
+                    }
 				}
 			}
 		}
@@ -30,7 +33,7 @@ bool directed(int bonus = 0, int begin = 0){
     return false;
 }
 
-bool undirected(int bonus = 0, int begin = 0){
+bool undirected(int bonus = 0, int begin = 0, int num = 1000){
 	// For each two points i th, j th in current sequence
     for(int i = begin; i < n; ++i){
         for(int j = i + 3; j < n; ++j){
@@ -47,7 +50,10 @@ bool undirected(int bonus = 0, int begin = 0){
                     newSeq[i + k] = newSeq[j - k];
                     newSeq[j - k] = temp;
                 }
-                add_path(newSeq);
+                num -= add_path(newSeq);
+                if(num == 0){
+                    return true;
+                }
             }
         }
     }

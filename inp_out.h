@@ -3,7 +3,7 @@ void input(){
 	// cout << "Use my test case graph or your own graph" << endl;
 	cout << "Choose the number of vertexs: ";
 	cin >> n;
-	cout << "Choose time limit: ";
+	cout << "Choose time limit (s): ";
 	cin >> t;
 	string s = "inp" + to_string(n) + ".txt";
     freopen(&s[0], "r", stdin);

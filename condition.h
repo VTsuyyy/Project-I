@@ -58,7 +58,7 @@ bool check_path(int *sequence){
 
 
 // Add new path as a state
-void add_path(int *sequence){
+int add_path(int *sequence){
 
 	// Check if path already exists   
 	if(check_path(sequence)){
@@ -77,5 +77,11 @@ void add_path(int *sequence){
 				bestSeq[l] = temp->s[l];
 			}
 		}
+
+		return 1;
+	}
+
+	else{
+		return 0;
 	}
 }
