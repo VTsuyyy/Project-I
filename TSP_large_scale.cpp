@@ -1,10 +1,10 @@
 
 // Include all library needed
-#include "include.h"
+#include "function/include.h"
 
-int main(){
-
-	input();
+int main(int argc, char * argv[]){
+	
+	input(argv[0]);
 
 	initialize();
 
@@ -21,9 +21,12 @@ int main(){
 		local_beam();
 	}
 
-        for(int l = 0; l <= n; l++){
-            currSeq[l] = bestSeq[l];
-        }
-		heuristic();
+	for(int l = 0; l <= n; l++){
+		currSeq[l] = bestSeq[l];
+	}
+
+	heuristic();
+
 	output();
+
 }

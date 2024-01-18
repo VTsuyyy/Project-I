@@ -1,12 +1,12 @@
 
-void input(){
+void input(string s){
 	// cout << "Use my test case graph or your own graph" << endl;
 	cout << "Choose the number of vertexs: ";
 	cin >> n;
 	cout << "Choose time limit (s): ";
 	cin >> t;
-	string s = "inp" + to_string(n) + ".txt";
-    freopen(&s[0], "r", stdin);
+    s = s.substr(0, s.size()-19) + "input\\" + "inp" + to_string(n) + ".txt";
+	freopen(&s[0], "r", stdin);
 
 	// Input the weights from i th point to j th point (complete graph with n points)
 	cin >> n;

@@ -1,6 +1,5 @@
 
 void greedy_algorithm(int b = 1){
-
 	// A path begin and end at point b 
 	int k = -1, k1 = n + 1;
 	currSeq[--k1] = b;
@@ -25,7 +24,6 @@ void greedy_algorithm(int b = 1){
 				}
 			}
 		}
-		
 		// Visit that points
 		visited[tmp] = true;
 		if(check){
@@ -35,14 +33,12 @@ void greedy_algorithm(int b = 1){
 			currSeq[++k] = tmp;
 		}
 	}
-	
 	int j = 0, l = 0;
 	for(j; j <= n; j++){
 		if(currSeq[j] == 1){
 			break;
 		}
 	}
-
 	// Save the current path
 	bestCost = cal_cost(currSeq);
 	for(l; l + j <= n; ++l){
